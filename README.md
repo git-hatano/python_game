@@ -168,3 +168,11 @@ cd python_game
 uv sync   # 仮想環境再現
 ```
 
+ブランチ運用例
+```
+main                 ← 安定版
+develop              ← 開発統合用
+feature/player-move  ← プレイヤー移動機能
+feature/enemy-ai     ← 敵 AI 機能
+bugfix/collision     ← バグ修正
+```
