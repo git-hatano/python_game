@@ -141,3 +141,30 @@ git commit -m "Initial commit"
 git branch -M main
 git push -u origin main
 ```
+
+## 5️⃣ 以降の開発フロー
+依存追加
+```
+uv add <package_name>
+git add pyproject.toml uv.lock
+git commit -m "Add <package_name>"
+git push
+```
+
+- .venv は共有しない
+- 他の開発者は git clone → uv sync で同じ環境を再現
+
+コード追加・更新
+```
+git add main.py game/ tests/
+git commit -m "Implement Player module"
+git push
+```
+
+チームメンバーの作業
+```
+git clone git@github.com:USERNAME/python_game.git
+cd python_game
+uv sync   # 仮想環境再現
+```
+
